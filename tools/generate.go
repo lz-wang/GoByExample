@@ -26,7 +26,7 @@ import (
 var siteDir = "./public"
 
 func verbose() bool {
-	return len(os.Getenv("VERBOSE")) > 0
+	return true
 }
 
 func check(err error) {
