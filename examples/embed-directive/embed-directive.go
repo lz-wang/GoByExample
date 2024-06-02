@@ -23,7 +23,7 @@ var fileByte []byte
 // 该类型实现了一个简单的虚拟文件系统。
 //
 //go:embed folder/single_file.txt
-//go:embed folder/*.hash
+//go:embed folder/*.py
 var folder embed.FS
 
 func main() {
@@ -33,9 +33,9 @@ func main() {
 	print(string(fileByte))
 
 	// 从嵌入的文件夹中检索一些文件。
-	content1, _ := folder.ReadFile("folder/file1.hash")
+	content1, _ := folder.ReadFile("folder/a.py")
 	print(string(content1))
 
-	content2, _ := folder.ReadFile("folder/file2.hash")
+	content2, _ := folder.ReadFile("folder/b.py")
 	print(string(content2))
 }
