@@ -2,3 +2,5 @@
 *.pyc
 public/
 .idea
+.vscode
+.hash
