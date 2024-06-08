@@ -253,8 +253,18 @@ func parseExamples() []*Example {
 		if verbose() {
 			fmt.Printf("Processing %s [%d/%d]\n", exampleName, i+1, len(exampleNames))
 		}
-		example := Example{Name: exampleName}
-		exampleID := strings.ToLower(exampleName)
+		dataId := strings.Split(exampleName, "->")
+		var name, id string
+		if len(dataId) == 1 {
+			id = dataId[0]
+			name = id
+		} else {
+			id = dataId[0]
+			name = dataId[1]
+		}
+		example := Example{Name: strings.TrimSpace(name)}
+
+		exampleID := strings.ToLower(id)
 		exampleID = strings.Replace(exampleID, " ", "-", -1)
 		exampleID = strings.Replace(exampleID, "/", "-", -1)
 		exampleID = strings.Replace(exampleID, "'", "", -1)

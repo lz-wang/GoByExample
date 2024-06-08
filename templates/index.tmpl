@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Go by Example</title>
     <link rel=stylesheet href="site.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="intro">
-      <h2><a href="./">Go by Example</a></h2>
-      <p>
-        <a href="https://go.dev">Go</a> is an
-        open source programming language designed for
-        building simple, fast, and reliable software.
-        Please read the official
-        <a href="https://go.dev/doc/tutorial/getting-started">documentation</a>
-        to learn a bit about Go code, tools packages,
-        and modules.
-      </p>
+        <h2><a href="./">Go by Example</a></h2>
+        <p>
+            <a href="https://go.dev">Go</a> 是一种开源编程语言，旨在构建简单、快速且可靠的软件。 请阅读 <a
+                href="https://go.dev/doc/tutorial/getting-started">官方文档</a>， 以了解有关 Go 代码、工具包和模块的一些信息。
+        </p>
 
-      <p>
-        <em>Go by Example</em> is a hands-on introduction
-        to Go using annotated example programs. Check out
-        the <a href="hello-world">first example</a> or
-        browse the full list below.
-      </p>
+        <p>
+            <em>Go by Example</em> 是通过带注释的示例程序对 Go 进行实践介绍。 请查看<a href="hello-world.html">第一个示例</a>或浏览下面的完整列表。
+        </p>
 
-      <ul>
-      {{range .}}
-        <li><a href="{{.ID}}.html">{{.Name}}</a></li>
-      {{end}}
-      </ul>
-{{ template "footer" }}
+        <ul>
+            {{range .}}
+            <li><a href="{{.ID}}.html">{{.Name}}</a></li>
+            {{end}}
+        </ul>
+        {{ template "footer" }}
     </div>
-  </body>
+</body>
+
 </html>
